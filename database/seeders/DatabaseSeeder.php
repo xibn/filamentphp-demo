@@ -109,7 +109,7 @@ class DatabaseSeeder extends Seeder
         $this->command->info('Blog categories created.');
 
         $this->command->warn(PHP_EOL . 'Creating blog authors and posts...');
-        $this->withProgressBar(20, fn () => Author::factory(1)
+        $this->withProgressBar(500, fn () => Author::factory(1)
             ->has(
                 Post::factory()->count(5)
                     ->has(
